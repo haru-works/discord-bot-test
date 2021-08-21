@@ -31,7 +31,8 @@ class SampleBot(commands.Bot):
         print(self.user.name)
         print(self.user.id)
         print('--------------------------')
- 
+        
+         
 # Botのインスタンス化、及び、起動処理
 if __name__ == '__main__':
     bot_config = confile.read_config('setting.ini')
