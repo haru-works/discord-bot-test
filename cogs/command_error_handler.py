@@ -42,7 +42,7 @@ class CommandErrorHandler(commands.Cog):
                 await ctx.author.send(f'{ctx.command} はプライベートメッセージでは使用できません')
             except discord.HTTPException:
                 pass
-
+            
         # BadArgumentエラー
         elif isinstance(error, commands.BadArgument):
             # どのコマンドの引数が悪かったのかチェック
@@ -50,7 +50,7 @@ class CommandErrorHandler(commands.Cog):
             #if ctx.command.qualified_name == 'ping': 
             #await ctx.send('入力したコマンドの引数が無効です')     
             return
-
+        
         # MissingPermissionsエラー          
         elif isinstance(error, commands.MissingPermissions):
             await ctx.send("あなたは、コマンドを実行する権限を持っていません")
