@@ -3,6 +3,7 @@ from discord.ext import commands
 import traceback
 import sys
 
+# コマンドクラス
 class CogCommandSample(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -17,7 +18,7 @@ class CogCommandSample(commands.Cog):
         
     @commands.command()
     async def ping(self, ctx):
-        await ctx.send('pong')
+        await ctx.send('ポン！')
 
 def setup(bot):
     return bot.add_cog(CogCommandSample(bot))

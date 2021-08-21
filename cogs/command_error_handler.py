@@ -3,6 +3,7 @@ from discord.ext import commands
 import traceback
 import sys
 
+# コマンドエラーハンドラークラス
 class CommandErrorHandler(commands.Cog):
     # コンストラクタ
     def __init__(self, bot):
